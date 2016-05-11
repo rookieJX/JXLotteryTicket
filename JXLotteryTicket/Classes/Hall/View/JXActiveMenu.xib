@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JXActiveMenu">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaopingguo" translatesAutoresizingMaskIntoConstraints="NO" id="alG-h2-OaM">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLi-cj-EPt">
+                    <rect key="frame" x="181" y="0.0" width="19" height="22"/>
+                    <state key="normal" image="alphaClose"/>
+                    <connections>
+                        <action selector="cancelBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="ME8-7Y-oYf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cLi-cj-EPt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="181" id="0va-m0-UGZ"/>
+                <constraint firstAttribute="trailing" secondItem="alG-h2-OaM" secondAttribute="trailing" id="39s-8m-Cfr"/>
+                <constraint firstItem="alG-h2-OaM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O1c-oG-CHo"/>
+                <constraint firstAttribute="trailing" secondItem="cLi-cj-EPt" secondAttribute="trailing" id="Pcz-rs-L1M"/>
+                <constraint firstAttribute="bottom" secondItem="alG-h2-OaM" secondAttribute="bottom" id="ciL-hT-DUk"/>
+                <constraint firstItem="alG-h2-OaM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sCH-VG-bYf"/>
+                <constraint firstItem="cLi-cj-EPt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uk0-22-Mrd"/>
+                <constraint firstAttribute="bottom" secondItem="cLi-cj-EPt" secondAttribute="bottom" constant="178" id="wkk-uk-cLW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="308" y="294"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alphaClose" width="19" height="19"/>
+        <image name="xiaopingguo" width="200" height="200"/>
+    </resources>
+</document>

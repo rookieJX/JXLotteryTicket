@@ -1,0 +1,15 @@
+//
+//  JXLotteryTicket.pch
+//  JXLotteryTicket
+//
+//  Created by 王加祥 on 16/5/11.
+//  Copyright © 2016年 Wangjiaxiang. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+
+#import "UIImage+Image.h"
+#import "UIView+Frame.h"
+
+#endif

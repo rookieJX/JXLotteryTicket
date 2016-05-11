@@ -8,7 +8,6 @@
 
 #import "JXMenuView.h"
 #import "JXMenuModel.h"
-#import "UIView+Frame.h"
 #define kCols 3
 @implementation JXMenuView
 

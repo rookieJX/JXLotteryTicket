@@ -9,15 +9,17 @@
 #import "JXHallViewController.h"
 #import "JXMenuModel.h"
 #import "JXMenuView.h"
-#import "UIImage+Image.h"
-#import "UIView+Frame.h"
+#import "JXCoverView.h"
+#import "JXActiveMenu.h"
 
-@interface JXHallViewController ()
+@interface JXHallViewController ()<JXActiveMenuDelegate>
 
 /** 存放item属性 */
 @property (nonatomic,strong) NSMutableArray * items;
 
 @end
+
+
 
 @implementation JXHallViewController
 
@@ -40,9 +42,25 @@
 }
 
 - (void)leftBarButtonItemClick:(UIBarButtonItem *)barItem {
-    NSLog(@"%s",__func__);
+    
+    // 点击弹出蒙版
+    [JXCoverView show];
+    
+    // 弹出活动窗口
+    JXActiveMenu * menu =  [JXActiveMenu showInPoint:self.view.center];
+    // 设置代理
+    menu.delegate = self;
+    
+    
 }
 
+#pragma mark - JXActiveMenuDelegate
+- (void)activeMenuDidClickCancel:(JXActiveMenu *)menu {
+    // 隐藏
+    [JXActiveMenu hideInPoint:CGPointMake(44, 44) completion:^{
+        [JXCoverView hide];
+    }];
+}
 - (void)popMenu:(UIBarButtonItem *)barItem {
     JXMenuModel * model1 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
     JXMenuModel * model2 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
