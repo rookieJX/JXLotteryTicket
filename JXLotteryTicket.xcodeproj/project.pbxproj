@@ -20,6 +20,12 @@
 		26CF9CB81CE2373100E11691 /* JXHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF9CB71CE2373100E11691 /* JXHistoryViewController.m */; };
 		26CF9CBB1CE2381A00E11691 /* JXMyLotteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF9CBA1CE2381A00E11691 /* JXMyLotteryViewController.m */; };
 		26CF9CBE1CE23C2100E11691 /* JXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF9CBD1CE23C2100E11691 /* JXTabBar.m */; };
+		5BD632C31CE2CCFE00B77930 /* JXTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD632C21CE2CCFE00B77930 /* JXTabBarButton.m */; };
+		5BD632C61CE2DA4100B77930 /* JXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD632C51CE2DA4100B77930 /* JXNavigationController.m */; };
+		5BD632CA1CE2EA1900B77930 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD632C91CE2EA1900B77930 /* UIImage+Image.m */; };
+		5BD632CD1CE3106D00B77930 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD632CC1CE3106D00B77930 /* UIView+Frame.m */; };
+		5BD632D01CE3343D00B77930 /* JXMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD632CF1CE3343D00B77930 /* JXMenuModel.m */; };
+		5BD632D31CE334F800B77930 /* JXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD632D21CE334F800B77930 /* JXMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,18 @@
 		26CF9CBA1CE2381A00E11691 /* JXMyLotteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXMyLotteryViewController.m; sourceTree = "<group>"; };
 		26CF9CBC1CE23C2100E11691 /* JXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTabBar.h; sourceTree = "<group>"; };
 		26CF9CBD1CE23C2100E11691 /* JXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTabBar.m; sourceTree = "<group>"; };
+		5BD632C11CE2CCFE00B77930 /* JXTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTabBarButton.h; sourceTree = "<group>"; };
+		5BD632C21CE2CCFE00B77930 /* JXTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTabBarButton.m; sourceTree = "<group>"; };
+		5BD632C41CE2DA4100B77930 /* JXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXNavigationController.h; sourceTree = "<group>"; };
+		5BD632C51CE2DA4100B77930 /* JXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXNavigationController.m; sourceTree = "<group>"; };
+		5BD632C81CE2EA1900B77930 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		5BD632C91CE2EA1900B77930 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		5BD632CB1CE3106D00B77930 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		5BD632CC1CE3106D00B77930 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		5BD632CE1CE3343D00B77930 /* JXMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMenuModel.h; path = JXLotteryTicket/Classes/Other/Catager/JXMenuModel.h; sourceTree = SOURCE_ROOT; };
+		5BD632CF1CE3343D00B77930 /* JXMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXMenuModel.m; path = JXLotteryTicket/Classes/Other/Catager/JXMenuModel.m; sourceTree = SOURCE_ROOT; };
+		5BD632D11CE334F800B77930 /* JXMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMenuView.h; path = JXLotteryTicket/Classes/Other/Catager/JXMenuView.h; sourceTree = SOURCE_ROOT; };
+		5BD632D21CE334F800B77930 /* JXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXMenuView.m; path = JXLotteryTicket/Classes/Other/Catager/JXMenuView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +271,8 @@
 		26CF9C931CE235A400E11691 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5BD632CE1CE3343D00B77930 /* JXMenuModel.h */,
+				5BD632CF1CE3343D00B77930 /* JXMenuModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +280,8 @@
 		26CF9C941CE235A400E11691 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD632D11CE334F800B77930 /* JXMenuView.h */,
+				5BD632D21CE334F800B77930 /* JXMenuView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +334,8 @@
 			children = (
 				26CF9CAA1CE2361700E11691 /* JXViewController.h */,
 				26CF9CAB1CE2361700E11691 /* JXViewController.m */,
+				5BD632C41CE2DA4100B77930 /* JXNavigationController.h */,
+				5BD632C51CE2DA4100B77930 /* JXNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,6 +352,8 @@
 			children = (
 				26CF9CBC1CE23C2100E11691 /* JXTabBar.h */,
 				26CF9CBD1CE23C2100E11691 /* JXTabBar.m */,
+				5BD632C11CE2CCFE00B77930 /* JXTabBarButton.h */,
+				5BD632C21CE2CCFE00B77930 /* JXTabBarButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,11 +394,23 @@
 		26CF9CA11CE235A400E11691 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5BD632C71CE2E9FA00B77930 /* Catager */,
 				26CF9CA21CE235A400E11691 /* AppDelegate.h */,
 				26CF9CA31CE235A400E11691 /* AppDelegate.m */,
 				26CF9CA41CE235A400E11691 /* main.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		5BD632C71CE2E9FA00B77930 /* Catager */ = {
+			isa = PBXGroup;
+			children = (
+				5BD632C81CE2EA1900B77930 /* UIImage+Image.h */,
+				5BD632C91CE2EA1900B77930 /* UIImage+Image.m */,
+				5BD632CB1CE3106D00B77930 /* UIView+Frame.h */,
+				5BD632CC1CE3106D00B77930 /* UIView+Frame.m */,
+			);
+			path = Catager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,12 +549,18 @@
 				26CF9CBB1CE2381A00E11691 /* JXMyLotteryViewController.m in Sources */,
 				26CF9CA61CE235A400E11691 /* main.m in Sources */,
 				26CF9CBE1CE23C2100E11691 /* JXTabBar.m in Sources */,
+				5BD632C61CE2DA4100B77930 /* JXNavigationController.m in Sources */,
 				26CF9CAC1CE2361700E11691 /* JXViewController.m in Sources */,
+				5BD632CD1CE3106D00B77930 /* UIView+Frame.m in Sources */,
+				5BD632D01CE3343D00B77930 /* JXMenuModel.m in Sources */,
 				26CF9CB81CE2373100E11691 /* JXHistoryViewController.m in Sources */,
 				26CF9CAF1CE236DF00E11691 /* JXArenaViewController.m in Sources */,
+				5BD632D31CE334F800B77930 /* JXMenuView.m in Sources */,
 				26CF9CA51CE235A400E11691 /* AppDelegate.m in Sources */,
 				26CF9CB21CE2370300E11691 /* JXDiscoverViewController.m in Sources */,
+				5BD632CA1CE2EA1900B77930 /* UIImage+Image.m in Sources */,
 				26CF9CB51CE2371800E11691 /* JXHallViewController.m in Sources */,
+				5BD632C31CE2CCFE00B77930 /* JXTabBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +696,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JXLotteryTicket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rookieJX.JXLotteryTicket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,6 +711,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JXLotteryTicket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rookieJX.JXLotteryTicket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -738,6 +784,7 @@
 				26CF9C811CE21D4F00E11691 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26CF9C821CE21D4F00E11691 /* Build configuration list for PBXNativeTarget "JXLotteryTicketTests" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +793,7 @@
 				26CF9C841CE21D4F00E11691 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26CF9C851CE21D4F00E11691 /* Build configuration list for PBXNativeTarget "JXLotteryTicketUITests" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +802,7 @@
 				26CF9C871CE21D4F00E11691 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

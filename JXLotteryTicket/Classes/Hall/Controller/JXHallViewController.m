@@ -7,8 +7,15 @@
 //
 
 #import "JXHallViewController.h"
+#import "JXMenuModel.h"
+#import "JXMenuView.h"
+#import "UIImage+Image.h"
+#import "UIView+Frame.h"
 
 @interface JXHallViewController ()
+
+/** 存放item属性 */
+@property (nonatomic,strong) NSMutableArray * items;
 
 @end
 
@@ -17,82 +24,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self setupNavigationBtn];
+}
+
+#pragma mark - 添加导航栏按钮
+- (void)setupNavigationBtn {
+    // 添加左边按钮
+    UIBarButtonItem * leftButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithRenderingOriginalImage:@"CS50_activity_image"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick:)];
+    self.navigationItem.leftBarButtonItem = leftButtonItem;
+
+    // 添加右边按钮
+    UIBarButtonItem * rightButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithRenderingOriginalImage:@"Development"] style:UIBarButtonItemStylePlain target:self action:@selector(popMenu:)];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
+
+}
+
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)barItem {
+    NSLog(@"%s",__func__);
+}
+
+- (void)popMenu:(UIBarButtonItem *)barItem {
+    JXMenuModel * model1 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+    JXMenuModel * model2 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+    JXMenuModel * model3 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+    JXMenuModel * model4 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+    JXMenuModel * model5 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+    JXMenuModel * model6 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+    NSArray * array = @[model1,model2,model3,model4,model5,model6];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    JXMenuView * view = [[JXMenuView alloc] init];
+    view.frame = CGRectMake(0, 0, self.view.width, self.view.height);
+    view.backgroundColor = [UIColor purpleColor];
+    view.items = array;
+    [self.view addSubview:view];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return 0;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+#pragma mark - 懒加载
+- (NSMutableArray *)items {
+    if (_items == nil) {
+        _items = [NSMutableArray array];
+    }
+    return _items;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

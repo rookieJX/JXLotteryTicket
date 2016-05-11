@@ -7,7 +7,7 @@
 //
 
 #import "JXMyLotteryViewController.h"
-
+#import "UIImage+Image.h"
 @interface JXMyLotteryViewController ()
 
 @end
@@ -16,22 +16,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupNav];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// 设置导航栏
+- (void)setupNav {
+    // 将左边按钮包装成一个UIView
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"FBMM_Barbutton"] forState:UIControlStateNormal];
+    [button setTitle:@"客服" forState:UIControlStateNormal];
+    
+    // 自适应尺寸
+    [button sizeToFit];
+    // 包装
+    UIBarButtonItem * leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = leftButtonItem;
+    
+    // 设置右边按钮
+    // 系统会默认渲染图片为蓝色
+    UIImage * image = [UIImage imageWithRenderingOriginalImage:@"Mylottery_config"];
+    UIBarButtonItem * rightButtonItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnClick:)];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)rightBtnClick:(UIBarButtonItem *)rightItem {
+    
 }
-*/
-
 @end
