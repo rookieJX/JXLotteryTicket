@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "JXViewController.h"
+#import "JXNewFeatureController.h"
+#define JXVersion @"version"
 
 @interface AppDelegate ()
 
@@ -20,9 +22,22 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    JXViewController * tabBarController = [[JXViewController alloc] init];
+    // 判断当前版本号
+    NSDictionary * dict = [NSBundle mainBundle].infoDictionary;
+    NSString * newVersion = dict[@"CFBundleShortVersionString"];
     
-    self.window.rootViewController = tabBarController;
+    // 多态
+    UIViewController * rootVc = nil;
+    
+    // 获取偏好设置内部存储的版本号
+    NSString * oldVersion = [[NSUserDefaults standardUserDefaults] objectForKey:JXVersion];
+//    if (![newVersion isEqualToString:oldVersion]) { // 如果两次不相等就进入新特新画面，并且存储当前版本
+        rootVc = [[JXNewFeatureController alloc] init];
+//    } else { // 进入主框架
+//        rootVc = [[JXViewController alloc] init];
+//    }
+    
+    self.window.rootViewController = rootVc;
     
     [self.window makeKeyAndVisible];
     

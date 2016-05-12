@@ -17,6 +17,7 @@
 
 @implementation JXDiscoverViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

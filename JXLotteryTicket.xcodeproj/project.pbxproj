@@ -10,6 +10,8 @@
 		26C867EE1CE37ED900F91170 /* JXCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C867ED1CE37ED900F91170 /* JXCoverView.m */; };
 		26C867F11CE3806A00F91170 /* JXActiveMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C867F01CE3806A00F91170 /* JXActiveMenu.m */; };
 		26C867F31CE3807E00F91170 /* JXActiveMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C867F21CE3807E00F91170 /* JXActiveMenu.xib */; };
+		26C867FB1CE4C6BC00F91170 /* JXMyLotteryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C867FA1CE4C6BC00F91170 /* JXMyLotteryViewController.xib */; };
+		26C868021CE4ED0D00F91170 /* JXNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C868011CE4ED0D00F91170 /* JXNewFeatureController.m */; };
 		26CF9C621CE21D4F00E11691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CF9C611CE21D4F00E11691 /* Assets.xcassets */; };
 		26CF9C651CE21D4F00E11691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26CF9C631CE21D4F00E11691 /* LaunchScreen.storyboard */; };
 		26CF9C701CE21D4F00E11691 /* JXLotteryTicketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF9C6F1CE21D4F00E11691 /* JXLotteryTicketTests.m */; };
@@ -61,6 +63,9 @@
 		26C867EF1CE3806A00F91170 /* JXActiveMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXActiveMenu.h; sourceTree = "<group>"; };
 		26C867F01CE3806A00F91170 /* JXActiveMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXActiveMenu.m; sourceTree = "<group>"; };
 		26C867F21CE3807E00F91170 /* JXActiveMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JXActiveMenu.xib; sourceTree = "<group>"; };
+		26C867FA1CE4C6BC00F91170 /* JXMyLotteryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JXMyLotteryViewController.xib; sourceTree = "<group>"; };
+		26C868001CE4ED0D00F91170 /* JXNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXNewFeatureController.h; sourceTree = "<group>"; };
+		26C868011CE4ED0D00F91170 /* JXNewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXNewFeatureController.m; sourceTree = "<group>"; };
 		26CF9C521CE21D4E00E11691 /* JXLotteryTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXLotteryTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CF9C611CE21D4F00E11691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CF9C641CE21D4F00E11691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,6 +143,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26C867FC1CE4ECE900F91170 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				26C867FD1CE4ECE900F91170 /* Controller */,
+				26C867FE1CE4ECE900F91170 /* Model */,
+				26C867FF1CE4ECE900F91170 /* View */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		26C867FD1CE4ECE900F91170 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26C868001CE4ED0D00F91170 /* JXNewFeatureController.h */,
+				26C868011CE4ED0D00F91170 /* JXNewFeatureController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26C867FE1CE4ECE900F91170 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26C867FF1CE4ECE900F91170 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		26CF9C491CE21D4E00E11691 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +236,7 @@
 		26CF9C881CE235A400E11691 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				26C867FC1CE4ECE900F91170 /* NewFeature */,
 				26CF9C891CE235A400E11691 /* Arena */,
 				26CF9C8D1CE235A400E11691 /* Discover */,
 				26CF9C911CE235A400E11691 /* Hall */,
@@ -415,6 +454,7 @@
 			children = (
 				26CF9CB91CE2381A00E11691 /* JXMyLotteryViewController.h */,
 				26CF9CBA1CE2381A00E11691 /* JXMyLotteryViewController.m */,
+				26C867FA1CE4C6BC00F91170 /* JXMyLotteryViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -563,6 +603,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C867FB1CE4C6BC00F91170 /* JXMyLotteryViewController.xib in Resources */,
 				26C867F31CE3807E00F91170 /* JXActiveMenu.xib in Resources */,
 				26CF9C651CE21D4F00E11691 /* LaunchScreen.storyboard in Resources */,
 				5B491D141CE464650004CC03 /* JXDiscoverViewController.storyboard in Resources */,
@@ -601,6 +642,7 @@
 				26CF9CAC1CE2361700E11691 /* JXViewController.m in Sources */,
 				5BD632CD1CE3106D00B77930 /* UIView+Frame.m in Sources */,
 				5BD632D01CE3343D00B77930 /* JXMenuModel.m in Sources */,
+				26C868021CE4ED0D00F91170 /* JXNewFeatureController.m in Sources */,
 				5B491D171CE471AB0004CC03 /* JXAllTicketsController.m in Sources */,
 				5B491D1D1CE486040004CC03 /* JXLuckyView.m in Sources */,
 				5B491D1A1CE471D20004CC03 /* JXTicketBtn.m in Sources */,

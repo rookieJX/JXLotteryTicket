@@ -9,6 +9,7 @@
 #import "JXMyLotteryViewController.h"
 #import "UIImage+Image.h"
 @interface JXMyLotteryViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
 
@@ -16,8 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage * image = self.button.currentBackgroundImage;
+    image = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
+    [self.button setBackgroundImage:image forState:UIControlStateNormal];
+    
     
     [self setupNav];
+    
 }
 
 // 设置导航栏

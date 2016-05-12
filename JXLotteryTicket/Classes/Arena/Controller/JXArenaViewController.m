@@ -8,8 +8,6 @@
 
 #import "JXArenaViewController.h"
 
-
-
 @interface JXArenaViewController ()
 
 @end
@@ -38,9 +36,17 @@
     // 改变宽度
     ment.width += 40;
     self.navigationItem.titleView = ment;
+    [ment addTarget:self action:@selector(mentClick:) forControlEvents:UIControlEventValueChanged];
+    [self mentClick:ment];
     
 }
 
-
+#pragma mark - 点击事件
+- (void)mentClick:(UISegmentedControl *)ment {
+    NSLog(@"%zd",ment.selectedSegmentIndex);
+    if (ment.selectedSegmentIndex == 0) {
+        
+    }
+}
 
 @end
