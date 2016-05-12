@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Image)
-+ (instancetype)imageWithRenderingOriginalImage:(NSString *)imageName ;
++ (instancetype)imageWithRenderingOriginalImage:(NSString *)imageName;
+
++ (instancetype)imageStrechableWithImageName:(NSString *)imageName;
 @end

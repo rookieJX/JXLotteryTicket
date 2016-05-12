@@ -17,6 +17,11 @@
 /** 存放item属性 */
 @property (nonatomic,strong) NSMutableArray * items;
 
+/** 下拉菜单 */
+@property (nonatomic,weak) JXMenuView * menu;
+
+/** 存储是佛需要隐藏弹出菜单 */
+@property (nonatomic,assign) BOOL isPopMenu;
 @end
 
 
@@ -62,19 +67,17 @@
     }];
 }
 - (void)popMenu:(UIBarButtonItem *)barItem {
-    JXMenuModel * model1 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
-    JXMenuModel * model2 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
-    JXMenuModel * model3 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
-    JXMenuModel * model4 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
-    JXMenuModel * model5 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
-    JXMenuModel * model6 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
-    NSArray * array = @[model1,model2,model3,model4,model5,model6];
-    
-    JXMenuView * view = [[JXMenuView alloc] init];
-    view.frame = CGRectMake(0, 0, self.view.width, self.view.height);
-    view.backgroundColor = [UIColor purpleColor];
-    view.items = array;
-    [self.view addSubview:view];
+
+    if (self.isPopMenu == NO) {
+        
+        // 直接调用get方法就可以
+        [self menu];
+    } else {
+        // 隐藏弹出框
+        [self.menu hide];
+    }
+    // 每次将上次的状态取反
+    self.isPopMenu = !self.isPopMenu;
 }
 #pragma mark - Table view data source
 
@@ -94,4 +97,20 @@
     return _items;
 }
 
+- (JXMenuView *)menu {
+    if (_menu == nil) {
+        JXMenuModel * model1 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+        JXMenuModel * model2 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+        JXMenuModel * model3 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+        JXMenuModel * model4 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+        JXMenuModel * model5 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+        JXMenuModel * model6 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+        JXMenuModel * model7 = [JXMenuModel menuModelImage:[UIImage imageNamed:@"Development"] title:nil];
+        NSArray * array = @[model1,model2,model3,model4,model5,model6,model7];
+        
+        // 方法内部已经实现引用，所以这里没有问题
+        _menu = [JXMenuView showInView:(UIView *)self.view items:array originPoint:CGPointZero];
+    }
+    return _menu;
+}
 @end

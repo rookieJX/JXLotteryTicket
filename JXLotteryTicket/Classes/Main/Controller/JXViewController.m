@@ -14,7 +14,7 @@
 #import "JXHallViewController.h"
 #import "JXHistoryViewController.h"
 #import "JXMyLotteryViewController.h"
-
+#import "JXArenaNavController.h"
 #import "JXTabBar.h"
 
 @interface JXViewController ()<JXTabBarDelegate>
@@ -45,18 +45,31 @@
 #pragma mark - 设置tabBar
 - (void)setupTabBar {
     // 先将原tabBar移除
-    [self.tabBar removeFromSuperview];
+    // 这里如果移除系统的tabBar，在之后跳转的时候隐藏就会有问题，我们就需要自己写隐藏动画
+//    [self.tabBar removeFromSuperview];
     
     JXTabBar * tabBar = [[JXTabBar alloc] init];
     // 设置tabBar的尺寸
     // 这里虽然已经移除了self.tabBar，但是并没有立即消失，是等到再次循环到这个地方才会消失，所以我们这里扔可以得到这部分的尺寸
     // 把一个控件移除父控件并不会马上销毁，一般在下一次运行循环的时候，就会判断这个对象有没有强引用，如果没有，才会销毁。
-    tabBar.frame = self.tabBar.frame;
+    tabBar.frame = self.tabBar.bounds;
     tabBar.items = self.items;
     // 设置代理
     tabBar.delegate = self;
-    [self.view addSubview:tabBar];
+    [self.tabBar addSubview:tabBar];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 删除系统tabBar子控件
+    for (UIView * childView in self.tabBar.subviews) {
+        // 判断是否是我们自定义的类,如果不是
+        if (![childView isKindOfClass:[JXTabBar class]]) {
+            // 将之移除
+            [childView removeFromSuperview];
+        }
+    }
 }
 
 #pragma mark - JXTabBarDelegate
@@ -78,7 +91,9 @@
     [self setupAddOneChildController:arena image:[UIImage imageNamed:@"TabBar_Arena_new"] selectedImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"] title:nil];
     
     // 发现
-    JXDiscoverViewController * discover = [[JXDiscoverViewController alloc] init];
+    // 采用storyBoard设置
+    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"JXDiscoverViewController" bundle:nil];
+    JXDiscoverViewController * discover = [storyBoard instantiateInitialViewController];
     [self setupAddOneChildController:discover image:[UIImage imageNamed:@"TabBar_Discovery_new"] selectedImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"] title:@"发现"];
     
     // 开奖信息
@@ -95,14 +110,15 @@
     // 正常状态下的图片
     controller.tabBarItem.image = image;
     // 随机颜色
-    controller.view.backgroundColor = [self randColor];
+//    controller.view.backgroundColor = [self randColor];
     // 选中状态下的图片
     controller.tabBarItem.selectedImage = selectedImage;
     // 将tabBar保存到数组中
     [self.items addObject:controller.tabBarItem];
     
     // 设置导航栏
-    JXNavigationController * nav = [[JXNavigationController alloc] initWithRootViewController:controller];
+    // 父类的子针可以指向指针对象
+    UINavigationController * nav = [[JXNavigationController alloc] initWithRootViewController:controller];
     // 设置导航栏标题
     controller.navigationItem.title = title;
     // 如果要设置背景图片，必须填UIBarMetricsDefault,默认导航控制器的子控制器的view尺寸会变化。
@@ -110,6 +126,13 @@
     // 直接在子控制器上的viewDidLoad这个方法中使用的话，因为控制器的view都是懒加载，所以在使用的时候，设置导航栏背景是无用的
 //    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
 
+    
+    // 判断是否是竞技场类
+    if ([controller isKindOfClass:[JXArenaViewController class]]) {
+        nav = [[JXArenaNavController alloc] initWithRootViewController:controller];
+    }
+    
+    
     // 添加到tabBar的子控制器上
     [self addChildViewController:nav];
 }

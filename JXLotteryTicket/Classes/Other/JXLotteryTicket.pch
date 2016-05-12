@@ -8,6 +8,16 @@
 
 #ifdef __OBJC__
 
+/** 屏幕宽度 */
+#define JXWidth [UIScreen mainScreen].bounds.size.width
+/** 屏幕高度 */
+#define JXHeight [UIScreen mainScreen].bounds.size.height
+/** 屏幕尺寸 */
+#define JXBouns [UIScreen mainScreen].bounds
+/** 主程序窗口 */
+#define JXKeyWindow [UIApplication sharedApplication].keyWindow
+/** 颜色 */
+#define JXColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 #import "UIImage+Image.h"
 #import "UIView+Frame.h"

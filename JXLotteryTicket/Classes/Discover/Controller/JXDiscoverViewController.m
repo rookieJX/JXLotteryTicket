@@ -8,6 +8,9 @@
 
 #import "JXDiscoverViewController.h"
 
+/**
+ *  因为尺寸是固定的，所以我们是可以用storyBoard来设置的，并且是可以设置为静态单元格，但是在加载的时候就需要从storyBoard中加载了
+ */
 @interface JXDiscoverViewController ()
 
 @end

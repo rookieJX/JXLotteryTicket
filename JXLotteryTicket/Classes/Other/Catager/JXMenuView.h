@@ -10,7 +10,7 @@
 
 @interface JXMenuView : UIView
 
-/** 模型列表 */
-@property (nonatomic,strong) NSArray * items;
++ (instancetype)showInView:(UIView *)superView items:(NSArray *)items originPoint:(CGPoint)originPoint;
 
+- (void)hide;
 @end
