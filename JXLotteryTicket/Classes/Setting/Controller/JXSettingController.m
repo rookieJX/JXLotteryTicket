@@ -10,13 +10,22 @@
 #import "JXSettingItem.h"
 #import "JXSettingGroupItems.h"
 
+#import "JXSwitchSettingItem.h"
+#import "JXArrowSettingItem.h"
+#import "JXSettingCell.h"
+
+#import "JXBlurView.h"
+#import "MBProgressHUD.h"
+
+#import "JXCodeController.h"
+#import "JXScoreController.h"
 
 @interface JXSettingController ()
-/** 一共有多少组 */
-@property (nonatomic,strong) NSMutableArray * items;
+
 @end
 
 @implementation JXSettingController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,64 +38,49 @@
 }
 
 - (void)setupGroup0 {
-    JXSettingItem * item = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    JXArrowSettingItem * item = [JXArrowSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    // 跳转之后的类名
+    item.nameVc = [UIViewController class];
     NSArray * array = @[item];
     JXSettingGroupItems * group = [JXSettingGroupItems settingGroupItems:array headTitle:@"测试标题1" footerTitle:nil];
-    [self.items addObject:group];
+    [self.groups addObject:group];
 }
 
 - (void)setupGroup1 {
-    JXSettingItem * item = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
-    JXSettingItem * item1 = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
-    JXSettingItem * item2 = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    JXArrowSettingItem * item = [JXArrowSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    item.nameVc = [JXCodeController class];
+    JXSwitchSettingItem * item1 = [JXSwitchSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    JXSwitchSettingItem * item2 = [JXSwitchSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
     NSArray * array = @[item,item1,item2];
     JXSettingGroupItems * group = [JXSettingGroupItems settingGroupItems:array headTitle:nil footerTitle:nil];
-    [self.items addObject:group];
+    [self.groups addObject:group];
 }
 - (void)setupGroup2 {
-    JXSettingItem * item = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
-    JXSettingItem * item1 = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
-    JXSettingItem * item2 = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
-    JXSettingItem * item3 = [JXSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    JXArrowSettingItem * item = [JXArrowSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"检查更新版本" subTitle:nil];
+    item.itemBlock = ^(NSIndexPath * indexPath) {
+        JXBlurView * blur = [[JXBlurView alloc] initWithFrame:JXBouns];
+        [JXKeyWindow addSubview:blur];
+        MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:blur animated:YES];
+        hud.label.text = @"请求中";
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+            [blur removeFromSuperview];
+        });
+    };
+    
+    JXArrowSettingItem * item1 = [JXArrowSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    item1.nameVc = [JXScoreController class];
+    JXArrowSettingItem * item2 = [JXArrowSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
+    JXArrowSettingItem * item3 = [JXArrowSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
     NSArray * array = @[item,item1,item2,item3];
     JXSettingGroupItems * group = [JXSettingGroupItems settingGroupItems:array headTitle:nil footerTitle:nil];
 
-    [self.items addObject:group];
+    [self.groups addObject:group];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    JXSettingGroupItems * group = self.items[section];
-    return group.items.count;
-}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.items.count;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString * identifier = @"cell";
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-    }
-    JXSettingGroupItems * group = self.items[indexPath.section];
-    JXSettingItem * item = group.items[indexPath.row];
-    cell.imageView.image = item.image;
-    cell.textLabel.text = item.title;
-    
-    return cell;
-}
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    JXSettingGroupItems * group = self.items[section];
-    return group.headTitle;
-}
-- (NSMutableArray *)items {
-    if (_items == nil) {
-        _items = [NSMutableArray array];
-    }
-    return _items;
-}
+
 
 @end

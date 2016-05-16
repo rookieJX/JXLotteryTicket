@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26319A921CEA0AA800DFC1C3 /* JXArrowSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26319A911CEA0AA800DFC1C3 /* JXArrowSettingItem.m */; };
+		26319A951CEA0AC200DFC1C3 /* JXSwitchSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26319A941CEA0AC200DFC1C3 /* JXSwitchSettingItem.m */; };
+		26319A981CEA0C1300DFC1C3 /* JXSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26319A971CEA0C1300DFC1C3 /* JXSettingCell.m */; };
+		26319A9D1CEA184A00DFC1C3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 26319A9C1CEA184A00DFC1C3 /* MBProgressHUD.m */; };
+		26319AA31CEA185100DFC1C3 /* DRNRealTimeBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26319AA01CEA185100DFC1C3 /* DRNRealTimeBlurView.m */; };
+		26319AA41CEA185100DFC1C3 /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 26319AA21CEA185100DFC1C3 /* UIImage+BoxBlur.m */; };
+		26319AA71CEA186800DFC1C3 /* JXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26319AA61CEA186800DFC1C3 /* JXBlurView.m */; };
+		268781E61CEA350700F91BC3 /* JXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268781E51CEA350700F91BC3 /* JXBaseViewController.m */; };
+		268781E91CEA37E400F91BC3 /* JXCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268781E81CEA37E400F91BC3 /* JXCodeController.m */; };
+		268781EC1CEA3A4F00F91BC3 /* JXScoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268781EB1CEA3A4F00F91BC3 /* JXScoreController.m */; };
 		26C867EE1CE37ED900F91170 /* JXCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C867ED1CE37ED900F91170 /* JXCoverView.m */; };
 		26C867F11CE3806A00F91170 /* JXActiveMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C867F01CE3806A00F91170 /* JXActiveMenu.m */; };
 		26C867F31CE3807E00F91170 /* JXActiveMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C867F21CE3807E00F91170 /* JXActiveMenu.xib */; };
@@ -63,6 +73,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26319A901CEA0AA800DFC1C3 /* JXArrowSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXArrowSettingItem.h; sourceTree = "<group>"; };
+		26319A911CEA0AA800DFC1C3 /* JXArrowSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXArrowSettingItem.m; sourceTree = "<group>"; };
+		26319A931CEA0AC200DFC1C3 /* JXSwitchSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXSwitchSettingItem.h; sourceTree = "<group>"; };
+		26319A941CEA0AC200DFC1C3 /* JXSwitchSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXSwitchSettingItem.m; sourceTree = "<group>"; };
+		26319A961CEA0C1300DFC1C3 /* JXSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXSettingCell.h; path = JXLotteryTicket/Classes/Setting/Model/JXSettingCell.h; sourceTree = SOURCE_ROOT; };
+		26319A971CEA0C1300DFC1C3 /* JXSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXSettingCell.m; path = JXLotteryTicket/Classes/Setting/Model/JXSettingCell.m; sourceTree = SOURCE_ROOT; };
+		26319A9B1CEA184A00DFC1C3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		26319A9C1CEA184A00DFC1C3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		26319A9F1CEA185100DFC1C3 /* DRNRealTimeBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRNRealTimeBlurView.h; sourceTree = "<group>"; };
+		26319AA01CEA185100DFC1C3 /* DRNRealTimeBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNRealTimeBlurView.m; sourceTree = "<group>"; };
+		26319AA11CEA185100DFC1C3 /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
+		26319AA21CEA185100DFC1C3 /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
+		26319AA51CEA186800DFC1C3 /* JXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXBlurView.h; path = JXLotteryTicket/Classes/Setting/Model/JXBlurView.h; sourceTree = SOURCE_ROOT; };
+		26319AA61CEA186800DFC1C3 /* JXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXBlurView.m; path = JXLotteryTicket/Classes/Setting/Model/JXBlurView.m; sourceTree = SOURCE_ROOT; };
+		268781E41CEA350700F91BC3 /* JXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXBaseViewController.h; sourceTree = "<group>"; };
+		268781E51CEA350700F91BC3 /* JXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXBaseViewController.m; sourceTree = "<group>"; };
+		268781E71CEA37E400F91BC3 /* JXCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCodeController.h; sourceTree = "<group>"; };
+		268781E81CEA37E400F91BC3 /* JXCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCodeController.m; sourceTree = "<group>"; };
+		268781EA1CEA3A4F00F91BC3 /* JXScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXScoreController.h; sourceTree = "<group>"; };
+		268781EB1CEA3A4F00F91BC3 /* JXScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXScoreController.m; sourceTree = "<group>"; };
 		26AF99651CE37D2A00DB5385 /* JXLotteryTicket.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXLotteryTicket.pch; sourceTree = "<group>"; };
 		26C867EC1CE37ED900F91170 /* JXCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCoverView.h; sourceTree = "<group>"; };
 		26C867ED1CE37ED900F91170 /* JXCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCoverView.m; sourceTree = "<group>"; };
@@ -161,6 +191,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26319A991CEA183A00DFC1C3 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				26319A9E1CEA185100DFC1C3 /* DRNRealTimeBlurView */,
+				26319A9A1CEA184A00DFC1C3 /* MBProgressHUD */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		26319A9A1CEA184A00DFC1C3 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				26319A9B1CEA184A00DFC1C3 /* MBProgressHUD.h */,
+				26319A9C1CEA184A00DFC1C3 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		26319A9E1CEA185100DFC1C3 /* DRNRealTimeBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				26319A9F1CEA185100DFC1C3 /* DRNRealTimeBlurView.h */,
+				26319AA01CEA185100DFC1C3 /* DRNRealTimeBlurView.m */,
+				26319AA11CEA185100DFC1C3 /* UIImage+BoxBlur.h */,
+				26319AA21CEA185100DFC1C3 /* UIImage+BoxBlur.m */,
+			);
+			path = DRNRealTimeBlurView;
+			sourceTree = "<group>";
+		};
+		268781E31CEA34E300F91BC3 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				268781E71CEA37E400F91BC3 /* JXCodeController.h */,
+				268781E81CEA37E400F91BC3 /* JXCodeController.m */,
+				268781EA1CEA3A4F00F91BC3 /* JXScoreController.h */,
+				268781EB1CEA3A4F00F91BC3 /* JXScoreController.m */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
 		26C867FC1CE4ECE900F91170 /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +568,7 @@
 		26CF9CA11CE235A400E11691 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				26319A991CEA183A00DFC1C3 /* Libs */,
 				5BD632C71CE2E9FA00B77930 /* Catager */,
 				26CF9CA21CE235A400E11691 /* AppDelegate.h */,
 				26CF9CA31CE235A400E11691 /* AppDelegate.m */,
@@ -537,6 +608,7 @@
 		5B178EBC1CE976F4001329EE /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				268781E31CEA34E300F91BC3 /* Push */,
 				5B178EBD1CE976F4001329EE /* Controller */,
 				5B178EBE1CE976F4001329EE /* Model */,
 				5B178EBF1CE976F4001329EE /* View */,
@@ -549,6 +621,8 @@
 			children = (
 				5B178EC01CE9770C001329EE /* JXSettingController.h */,
 				5B178EC11CE9770C001329EE /* JXSettingController.m */,
+				268781E41CEA350700F91BC3 /* JXBaseViewController.h */,
+				268781E51CEA350700F91BC3 /* JXBaseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -558,8 +632,12 @@
 			children = (
 				5B178EC31CE9B302001329EE /* JXSettingItem.h */,
 				5B178EC41CE9B302001329EE /* JXSettingItem.m */,
+				26319A931CEA0AC200DFC1C3 /* JXSwitchSettingItem.h */,
+				26319A941CEA0AC200DFC1C3 /* JXSwitchSettingItem.m */,
 				5B178EC61CE9B727001329EE /* JXSettingGroupItems.h */,
 				5B178EC71CE9B727001329EE /* JXSettingGroupItems.m */,
+				26319A901CEA0AA800DFC1C3 /* JXArrowSettingItem.h */,
+				26319A911CEA0AA800DFC1C3 /* JXArrowSettingItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -567,6 +645,10 @@
 		5B178EBF1CE976F4001329EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26319A961CEA0C1300DFC1C3 /* JXSettingCell.h */,
+				26319A971CEA0C1300DFC1C3 /* JXSettingCell.m */,
+				26319AA51CEA186800DFC1C3 /* JXBlurView.h */,
+				26319AA61CEA186800DFC1C3 /* JXBlurView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -718,14 +800,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268781E91CEA37E400F91BC3 /* JXCodeController.m in Sources */,
+				268781EC1CEA3A4F00F91BC3 /* JXScoreController.m in Sources */,
 				26CF9CBB1CE2381A00E11691 /* JXMyLotteryViewController.m in Sources */,
 				5B178EC51CE9B302001329EE /* JXSettingItem.m in Sources */,
 				26CF9CA61CE235A400E11691 /* main.m in Sources */,
 				26CF9CBE1CE23C2100E11691 /* JXTabBar.m in Sources */,
+				26319A9D1CEA184A00DFC1C3 /* MBProgressHUD.m in Sources */,
+				26319AA71CEA186800DFC1C3 /* JXBlurView.m in Sources */,
+				268781E61CEA350700F91BC3 /* JXBaseViewController.m in Sources */,
+				26319A951CEA0AC200DFC1C3 /* JXSwitchSettingItem.m in Sources */,
 				5B491D0F1CE45BB90004CC03 /* JXArenaNavController.m in Sources */,
+				26319A921CEA0AA800DFC1C3 /* JXArrowSettingItem.m in Sources */,
 				5B491D201CE487A00004CC03 /* JXLuckyController.m in Sources */,
 				5BD632C61CE2DA4100B77930 /* JXNavigationController.m in Sources */,
 				26C867EE1CE37ED900F91170 /* JXCoverView.m in Sources */,
+				26319AA31CEA185100DFC1C3 /* DRNRealTimeBlurView.m in Sources */,
+				26319A981CEA0C1300DFC1C3 /* JXSettingCell.m in Sources */,
 				5B178EC21CE9770C001329EE /* JXSettingController.m in Sources */,
 				26CF9CAC1CE2361700E11691 /* JXViewController.m in Sources */,
 				5BD632CD1CE3106D00B77930 /* UIView+Frame.m in Sources */,
@@ -746,6 +837,7 @@
 				5BD632CA1CE2EA1900B77930 /* UIImage+Image.m in Sources */,
 				26CF9CB51CE2371800E11691 /* JXHallViewController.m in Sources */,
 				5B178EB81CE96FE5001329EE /* JXSaveTool.m in Sources */,
+				26319AA41CEA185100DFC1C3 /* UIImage+BoxBlur.m in Sources */,
 				5BD632C31CE2CCFE00B77930 /* JXTabBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

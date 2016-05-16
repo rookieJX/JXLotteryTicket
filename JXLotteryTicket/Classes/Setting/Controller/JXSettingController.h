@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface JXSettingController : UITableViewController
+#import "JXBaseViewController.h"
+@interface JXSettingController : JXBaseViewController
 
 @end

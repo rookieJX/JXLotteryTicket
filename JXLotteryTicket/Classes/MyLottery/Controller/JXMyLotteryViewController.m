@@ -47,7 +47,7 @@
 }
 
 - (void)rightBtnClick:(UIBarButtonItem *)rightItem {
-    JXSettingController * setting = [[JXSettingController alloc] initWithStyle:UITableViewStyleGrouped];
+    JXSettingController * setting = [[JXSettingController alloc] init];
     
     [self.navigationController pushViewController:setting animated:YES];
 }

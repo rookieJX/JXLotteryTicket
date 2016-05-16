@@ -43,7 +43,7 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated { // 当导航控制器push的时候回调用这个方法。
-    
+    NSLog(@"%s",__func__);
     if (self.viewControllers.count != 0) { // 第一次的时候还没走到super这个方法，所以self.viewControllers.count还是为0，当不为0的时候就隐藏
         viewController.hidesBottomBarWhenPushed = YES;
         
@@ -58,6 +58,6 @@
 }
 
 - (void)back:(UIBarButtonItem *)sender {
-    [self popToRootViewControllerAnimated:YES];
+    [self popViewControllerAnimated:YES];
 }
 @end

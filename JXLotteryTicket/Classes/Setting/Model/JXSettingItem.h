@@ -16,5 +16,8 @@
 /** 子标题 */
 @property (nonatomic,strong) NSString * subTitle;
 
+/** block回掉 */
+@property (nonatomic,strong) void(^itemBlock)(NSIndexPath * indexPath);
+
 + (instancetype)settingItemWithImage:(UIImage *)image title:(NSString *)title subTitle:(NSString *)subTitle;
 @end
