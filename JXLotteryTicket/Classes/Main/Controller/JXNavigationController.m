@@ -42,6 +42,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated { // 当导航控制器push的时候回调用这个方法。
+    
+    if (self.viewControllers.count != 0) { // 第一次的时候还没走到super这个方法，所以self.viewControllers.count还是为0，当不为0的时候就隐藏
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+        // 当不是跟控制器的时候设置返回按钮
+        UIImage * image = [UIImage imageWithRenderingOriginalImage:@"NavBack"];
+        UIBarButtonItem * bar = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+        viewController.navigationItem.leftBarButtonItem = bar;
+    }
+    
+    [super pushViewController:viewController animated:animated];
+    
+}
 
-
+- (void)back:(UIBarButtonItem *)sender {
+    [self popToRootViewControllerAnimated:YES];
+}
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "JXMyLotteryViewController.h"
-#import "UIImage+Image.h"
+#import "JXSettingController.h"
 @interface JXMyLotteryViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
@@ -47,6 +47,8 @@
 }
 
 - (void)rightBtnClick:(UIBarButtonItem *)rightItem {
+    JXSettingController * setting = [[JXSettingController alloc] initWithStyle:UITableViewStyleGrouped];
     
+    [self.navigationController pushViewController:setting animated:YES];
 }
 @end

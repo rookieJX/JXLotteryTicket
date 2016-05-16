@@ -23,5 +23,9 @@
 /** y坐标 */
 @property (nonatomic,assign) CGFloat y;
 
+/** 中心X */
+@property (nonatomic,assign) CGFloat centerX;
 
+/** 中心Y */
+@property (nonatomic,assign) CGFloat centerY;
 @end
