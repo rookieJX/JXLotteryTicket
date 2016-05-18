@@ -20,6 +20,8 @@
 #import "JXCodeController.h"
 #import "JXScoreController.h"
 
+#import "JXHelpController.h"
+
 @interface JXSettingController ()
 
 @end
@@ -35,8 +37,17 @@
     [self setupGroup1];
     
     [self setupGroup2];
+    
+    // 设置右边按钮
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"帮助" style:UIBarButtonItemStylePlain target:self action:@selector(help)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
+- (void)help {
+    JXHelpController * help = [[JXHelpController alloc] init];
+    help.title = @"帮助";
+    [self.navigationController pushViewController:help animated:YES];
+}
 - (void)setupGroup0 {
     JXArrowSettingItem * item = [JXArrowSettingItem settingItemWithImage:[UIImage imageNamed:@"RedeemCode"] title:@"使用兑换码" subTitle:nil];
     // 跳转之后的类名

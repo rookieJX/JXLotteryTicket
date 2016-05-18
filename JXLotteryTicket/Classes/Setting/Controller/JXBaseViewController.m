@@ -59,6 +59,7 @@
         if (arrowItem.nameVc) {
             // 需要跳转类
             UIViewController * vc = [[arrowItem.nameVc alloc] init];
+            vc.navigationItem.title = item.title;
             [weakSelf.navigationController pushViewController:vc animated:YES];
         }
     }

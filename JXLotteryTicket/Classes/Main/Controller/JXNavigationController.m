@@ -25,7 +25,8 @@
     // 获取哪个类
     UINavigationBar * bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
     [bar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
-    
+    // 设置导航条文字颜色
+    [bar setTintColor:[UIColor whiteColor]];
     // 设置导航栏标题颜色
     NSMutableDictionary * dict = [NSMutableDictionary dictionary];
     dict[NSForegroundColorAttributeName] = [UIColor whiteColor];
